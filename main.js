@@ -67,7 +67,7 @@ RESTapp.post('/event', function(req, res, next){
 	writeToWS(id, JSON.stringify(req.body.data), res, req.body.uuid);
 
 	if (req.body.uuid === undefined)
-		res.send("{ok:true}");
+		res.send(JSON.stringify({"ok":true}));
 
 });
 
